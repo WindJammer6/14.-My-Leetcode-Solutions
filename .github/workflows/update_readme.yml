@@ -1,4 +1,4 @@
-# This workflow will install Python 3, run readme_generator.py, save output to README.md and then push changes.
+# This workflow will install Python 3, run readme_generator.py, save the output to README.md and then push changes.
 
 name: Update README.md
 
