@@ -8,7 +8,7 @@ They do answer the Leetcode questions, but there are definitely better answer co
 ## List of Leetcode Questions Solved
 **Easy**
 
-![Auto Update](https://github.com/BrandonTang89/Competitive_Programming_4_Solutions/actions/workflows/Update_README.yml/badge.svg)
+![Auto Update](https://github.com/WindJammer6/14.My_Leetcode_Solutions/actions/workflows/Update_README.yml/badge.svg)
 
 **Medium**
 
