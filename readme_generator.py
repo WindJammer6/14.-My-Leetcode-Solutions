@@ -4,8 +4,8 @@ import re
 start_of_readme = '''
 # List of LeetCode Questions Solved
 ![Auto Update](https://github.com/WindJammer6/14.-My-Leetcode-Solutions/actions/workflows/update_readme.yml/badge.svg)
-| Index | Question Title | Solution |
-| ----- | -------------- | -------- |'''
+| No. | Index | Question Title | Solution |
+| --- | ----- | -------------- | -------- |'''
 
 print(start_of_readme)
 
@@ -44,7 +44,7 @@ def print_table():
             if things_to_write[index + 1][3] == task:
                 continue
 
-        line = f"| {q_number} | [{q_title}]({task}) | "
+        line = f"| {index + 1} | {q_number} | [{q_title}]({task}) | "
         for solution_type, solution in solution_types:
             line += f"[{solution_type}]({solution}), "
 
@@ -54,5 +54,4 @@ def print_table():
         solution_types.clear()
 
 print_table()
-
 
