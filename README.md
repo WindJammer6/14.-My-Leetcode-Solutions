@@ -1,8 +1,17 @@
+# 14.-My-Leetcode-Solutions :dart:
+Here are some of my accepted attempts at some Leetcode questions. And hey, I managed to learn how to automate the process of updating my README.md file whenever I solved and 
+upload a new solution to a Leetcode question in this repository!
 
-# List of LeetCode Questions Solved
+My Leetcode account: https://leetcode.com/WindJammer6/
+
+<ins>Disclaimer</ins>: I am a student programmer, these solutions that I have attached in this repository are not perfect answers to the Leetcode questions (in terms of design 
+and Time and Space Big O Notation Complexity), but are just merely my sharing of my own approach to the questions (in terms of design and Time and Space Big O Notation Complexity).
+They do answer the Leetcode questions, but there are definitely better answer codes out there.
+
+# List of Leetcode Questions Solved
 ![Auto Update](https://github.com/WindJammer6/14.-My-Leetcode-Solutions/actions/workflows/update_readme.yml/badge.svg)
-| No. | Index | Question Title | Solution |
-| --- | ----- | -------------- | -------- |
+| Leetcode Question Index | Leetcode Question Title | Solution and Programming Language Used |
+| ----------------------- | ----------------------- | -------------------------------------- |
 | 1 | 1 | [two sum](https://leetcode.com/problems/two-sum) | [Python](https://github.com/WindJammer6/14.-My-Leetcode-Solutions/blob/main/1_Easy_LeetCode_Questions/leetcode_1_two-sum.py) |
 | 2 | 13 | [roman to integer](https://leetcode.com/problems/roman-to-integer) | [Python](https://github.com/WindJammer6/14.-My-Leetcode-Solutions/blob/main/1_Easy_LeetCode_Questions/leetcode_13_roman-to-integer.py) |
 | 3 | 20 | [valid parentheses](https://leetcode.com/problems/valid-parentheses) | [Python](https://github.com/WindJammer6/14.-My-Leetcode-Solutions/blob/main/1_Easy_LeetCode_Questions/leetcode_20_valid-parentheses_(onStackDataStructure).py) |
