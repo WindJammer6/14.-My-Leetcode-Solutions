@@ -30,7 +30,7 @@ print(start_of_readme)
 file_types_dictionary = {'C++': 'cpp', 'Python': 'py', 'Haskell': 'hs', 'C': 'c'}
 
 #Getting the Leetcode Solutions
-stream = os.popen('find | grep Leetcode')
+stream = os.popen('find | grep kattis')
 lines = stream.readlines()
 
 things_to_write = []
