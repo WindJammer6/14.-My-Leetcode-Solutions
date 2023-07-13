@@ -22,4 +22,5 @@ Python code is executed using Python 3.10.4 on my machine but will work on the 3
 ![Auto Update](https://github.com/BrandonTang89/Competitive_Programming_4_Solutions/actions/workflows/Update_README.yml/badge.svg)
 | Index | Question Title | Solution |
 | ----- | -------------- | -------- |
-| 1 | [buildingboundaries](https://leetcode.com/problems/buildingboundaries) | [Python](https://github.com/WindJammer6/14.-My-Leetcode-Solutions/blob/main/1_Easy_LeetCode_Question/kattis_buildingboundaries.py) |
+| 1 | [blackfriday](https://leetcode.com/problems/blackfriday) | [Python](https://github.com/WindJammer6/14.-My-Leetcode-Solutions/blob/main/1_Easy_LeetCode_Question/kattis_blackfriday.py) |
+| 2 | [buildingboundaries](https://leetcode.com/problems/buildingboundaries) | [Python](https://github.com/WindJammer6/14.-My-Leetcode-Solutions/blob/main/1_Easy_LeetCode_Question/kattis_buildingboundaries.py) |
