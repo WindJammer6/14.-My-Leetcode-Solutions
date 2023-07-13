@@ -10,8 +10,8 @@ They do answer the Leetcode questions, but there are definitely better answer co
 
 # List of Leetcode Questions Solved
 ![Auto Update](https://github.com/WindJammer6/14.-My-Leetcode-Solutions/actions/workflows/update_readme.yml/badge.svg)
-| Leetcode Question Index | Leetcode Question Title | Solution and Programming Language Used |
-| ----------------------- | ----------------------- | -------------------------------------- |
+| No. | Leetcode Question Index | Leetcode Question Title | Solution and Programming Language Used |
+| --- | ----------------------- | ----------------------- | -------------------------------------- |
 | 1 | 1 | [two sum](https://leetcode.com/problems/two-sum) | [Python](https://github.com/WindJammer6/14.-My-Leetcode-Solutions/blob/main/1_Easy_LeetCode_Questions/leetcode_1_two-sum.py) |
 | 2 | 13 | [roman to integer](https://leetcode.com/problems/roman-to-integer) | [Python](https://github.com/WindJammer6/14.-My-Leetcode-Solutions/blob/main/1_Easy_LeetCode_Questions/leetcode_13_roman-to-integer.py) |
 | 3 | 20 | [valid parentheses](https://leetcode.com/problems/valid-parentheses) | [Python](https://github.com/WindJammer6/14.-My-Leetcode-Solutions/blob/main/1_Easy_LeetCode_Questions/leetcode_20_valid-parentheses_(onStackDataStructure).py) |
