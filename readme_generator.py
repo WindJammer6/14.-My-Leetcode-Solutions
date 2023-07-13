@@ -19,8 +19,8 @@ things_to_write = []
 for line in lines:
     line = line.strip()
 
-    # Matches leetcode_123_question-title_(optional-info).py or leetcode_123_question-title_(optional-info).cpp or leetcode_123_question-title.py
-    m = re.search(r'\/.*leetcode_(\d+)_(.*?)_?\([^\)]*\)?\.(?:py|cpp|hs|c)', line)
+    # Matches leetcode_123_question-title_(optional-info).py or leetcode_123_question-title.py
+    m = re.search(r'\/.*leetcode_(\d+)_(.*?)_?(\(.*\))?\.py', line)
 
     if m:
         q_number = m.group(1)  # Get the number from the file name
