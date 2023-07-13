@@ -21,8 +21,9 @@ for line in lines:
     # Matches kattis_xxxx.py or kattis_xxxx.cpp or kattis_xxxx.hs
     m = re.search(r'\/.*leetcode_(\w*)\.(?:py|cpp|hs|c)', line)
 
-    things_to_write.append([str(m.group(1)), "https://github.com/WindJammer6/14.-My-Leetcode-Solutions/blob/main" +
-                            line[1:], "https://leetcode.com/problems/" + str(m.group(1))])
+    if m:
+        things_to_write.append([str(m.group(1)), "https://github.com/WindJammer6/14.-My-Leetcode-Solutions/blob/main" +
+                                line[1:], "https://leetcode.com/problems/" + str(m.group(1))])
     
 def print_table():
     things_to_write.sort()
