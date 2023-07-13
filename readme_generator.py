@@ -13,8 +13,8 @@ They do answer the Leetcode questions, but there are definitely better answer co
 
 # List of Leetcode Questions Solved
 ![Auto Update](https://github.com/WindJammer6/14.-My-Leetcode-Solutions/actions/workflows/update_readme.yml/badge.svg)
-| Leetcode Question Index | Leetcode Question Title | Solution and Programming Language Used |
-| ----------------------- | ----------------------- | -------------------------------------- |'''
+| No. | Leetcode Question Index | Leetcode Question Title | Solution and Programming Language Used |
+| --- | ----------------------- | ----------------------- | -------------------------------------- |'''
 
 print(start_of_readme)
 
