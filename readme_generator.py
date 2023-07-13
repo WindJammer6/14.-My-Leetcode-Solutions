@@ -11,6 +11,8 @@ My Leetcode account: https://leetcode.com/WindJammer6/
 and Time and Space Big O Notation Complexity), but are just merely my sharing of my own approach to the questions (in terms of design and Time and Space Big O Notation Complexity).
 They do answer the Leetcode questions, but there are definitely better answer codes out there.
 
+(can try adding a column in the list below indicating difficulty of the leetcode question)
+
 # List of Leetcode Questions Solved
 ![Auto Update](https://github.com/WindJammer6/14.-My-Leetcode-Solutions/actions/workflows/update_readme.yml/badge.svg)
 | No. | Leetcode Question Index | Leetcode Question Title | Solution and Programming Language Used |
