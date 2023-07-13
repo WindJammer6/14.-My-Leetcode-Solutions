@@ -2,7 +2,7 @@ import os, re
 
 start_of_readme = '''
 # List of Kattis Questions Solved
-![Auto Update](https://github.com/BrandonTang89/Competitive_Programming_4_Solutions/actions/workflows/Update_README.yml/badge.svg)
+![Auto Update](https://github.com/WindJammer6/14.-My-Leetcode-Solutions/actions/workflows/update_readme.yml/badge.svg)
 | Index | Question Title | Solution |
 | ----- | -------------- | -------- |'''
 
