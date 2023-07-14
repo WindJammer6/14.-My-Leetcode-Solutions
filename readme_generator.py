@@ -11,6 +11,13 @@ print(start_of_readme)
 
 file_types_dictionary = {'C++': 'cpp', 'Python': 'py', 'Haskell': 'hs', 'C': 'c'}
 
+# Define the folders and their corresponding difficulties
+folders_difficulty = {
+    '1_Easy_LeetCode_Questions': 'Easy',
+    '2_Medium_LeetCode_Questions': 'Medium',
+    '3_Hard_LeetCode_Questions': 'Hard'
+}
+
 # Getting the LeetCode Solutions
 stream = os.popen('find . -type f -iname "leetcode*.py"')
 lines = stream.readlines()
@@ -28,14 +35,15 @@ for line in lines:
         q_title = m.group(2).replace('-', ' ')  # Get the question title and replace hyphens with spaces
         sol = "https://github.com/WindJammer6/14.-My-Leetcode-Solutions/blob/main" + line[1:]  # Construct the solution URL
         task = f"https://leetcode.com/problems/{q_title.lower().replace(' ', '-')}"  # Construct the task URL
+        difficulty = folders_difficulty.get(folder, 'Unknown')  # Get the difficulty based on the folder
 
-        things_to_write.append([q_number, q_title, sol, folder, task])
+        things_to_write.append([q_number, q_title, sol, difficulty, task])
 
 def print_table():
     things_to_write.sort(key=lambda x: int(x[0]))  # Sort the entries based on the index column
 
     solution_types = []
-    for index, (q_number, q_title, sol, folder, task) in enumerate(things_to_write):
+    for index, (q_number, q_title, sol, difficulty, task) in enumerate(things_to_write):
         for k, v in file_types_dictionary.items():
             if sol.endswith(v):
                 solution_types.append((k, sol))
@@ -49,7 +57,7 @@ def print_table():
         for solution_type, solution in solution_types:
             line += f"[{solution_type}]({solution}), "
 
-        line += f"| {folder} |"  # Add the folder as the difficulty column
+        line += f"{difficulty} |"  # Add the difficulty column
         print(line)
 
         solution_types.clear()
