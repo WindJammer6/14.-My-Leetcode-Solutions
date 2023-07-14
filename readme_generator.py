@@ -1,36 +1,26 @@
 import os
 import re
 
-start_of_readme = '''# 14.-My-Leetcode-Solutions :dart:
-Here are some of my accepted attempts at some Leetcode questions. And hey, I managed to learn how to automate the process of updating my README.md file whenever I solved and 
-upload a new solution to a Leetcode question in this repository!
-
-My Leetcode account: https://leetcode.com/WindJammer6/
-
-<ins>Disclaimer</ins>: I am a student programmer, these solutions that I have attached in this repository are not perfect answers to the Leetcode questions (in terms of design 
-and Time and Space Big O Notation Complexity), but are just merely my sharing of my own approach to the questions (in terms of design and Time and Space Big O Notation Complexity).
-They do answer the Leetcode questions, but there are definitely better answer codes out there.
-
-(can try adding a column in the list below indicating difficulty of the leetcode question)
-
-# List of Leetcode Questions Solved
+start_of_readme = '''
+# List of LeetCode Questions Solved
 ![Auto Update](https://github.com/WindJammer6/14.-My-Leetcode-Solutions/actions/workflows/update_readme.yml/badge.svg)
-| No. | Leetcode Question Index | Leetcode Question Title | Solution and Programming Language Used |
-| --- | ----------------------- | ----------------------- | -------------------------------------- |'''
+| No. | Index | Question Title | Solution | Difficulty |
+| --- | ----- | -------------- | -------- | ---------- |'''
 
 print(start_of_readme)
 
 file_types_dictionary = {'C++': 'cpp', 'Python': 'py', 'Haskell': 'hs', 'C': 'c'}
 
 # Getting the LeetCode Solutions
-stream = os.popen('find | grep leetcode')
+stream = os.popen('find . -type f -iname "leetcode*.py"')
 lines = stream.readlines()
 
 things_to_write = []
 for line in lines:
     line = line.strip()
+    folder = line.split("/")[1]  # Get the folder name
 
-    # Matches leetcode_123_question-title_(optional-info).py or leetcode_123_question-title.py
+    # Matches leetcode_123_question-title_(optional-info).py
     m = re.search(r'\/.*leetcode_(\d+)_(.*?)_?(\(.*\))?\.py', line)
 
     if m:
@@ -39,27 +29,27 @@ for line in lines:
         sol = "https://github.com/WindJammer6/14.-My-Leetcode-Solutions/blob/main" + line[1:]  # Construct the solution URL
         task = f"https://leetcode.com/problems/{q_title.lower().replace(' ', '-')}"  # Construct the task URL
 
-        things_to_write.append([q_number, q_title, sol, task])
+        things_to_write.append([q_number, q_title, sol, folder, task])
 
 def print_table():
     things_to_write.sort(key=lambda x: int(x[0]))  # Sort the entries based on the index column
 
     solution_types = []
-    for index, (q_number, q_title, sol, task) in enumerate(things_to_write):
+    for index, (q_number, q_title, sol, folder, task) in enumerate(things_to_write):
         for k, v in file_types_dictionary.items():
             if sol.endswith(v):
                 solution_types.append((k, sol))
                 break
 
         if index != len(things_to_write) - 1:
-            if things_to_write[index + 1][3] == task:
+            if things_to_write[index + 1][4] == task:
                 continue
 
         line = f"| {index + 1} | {q_number} | [{q_title}]({task}) | "
         for solution_type, solution in solution_types:
             line += f"[{solution_type}]({solution}), "
 
-        line = line[:-2] + " |"
+        line += f"| {folder} |"  # Add the folder as the difficulty column
         print(line)
 
         solution_types.clear()
