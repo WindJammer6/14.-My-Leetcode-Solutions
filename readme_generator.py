@@ -57,7 +57,7 @@ def print_table():
         for solution_type, solution in solution_types:
             line += f"[{solution_type}]({solution}), "
 
-        line += f"{difficulty} |"  # Add the difficulty column
+        line += f"| {difficulty} |"  # Add the difficulty column
         print(line)
 
         solution_types.clear()
