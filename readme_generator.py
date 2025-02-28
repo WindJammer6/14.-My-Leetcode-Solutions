@@ -28,9 +28,16 @@ folders_difficulty = {
 }
 
 # Getting the LeetCode Solutions
-# stream = os.popen('find . -type f -iname "leetcode*.py"')
-# lines = stream.readlines()
-stream = os.popen('find . -type f -iname "leetcode_*.py" -o -iname "leetcode_*.java"')
+stream = os.popen(
+    'find . -type f '
+    '-iname "leetcode_*.py" '
+    '-o -iname "leetcode_*.java"'
+    '-o -iname "leetcode_*.cpp" '
+    '-o -iname "leetcode_*.c" '
+    '-o -iname "leetcode_*.hs" '
+    '-o -iname "leetcode_*.cs" '
+    '-o -iname "leetcode_*.js" '
+)
 lines = stream.readlines()
 
 things_to_write = []
