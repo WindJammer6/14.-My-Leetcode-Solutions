@@ -18,7 +18,7 @@ They do answer the Leetcode questions, but there are definitely better answer co
 
 print(start_of_readme)
 
-file_types_dictionary = {'C++': 'cpp', 'Python': 'py', 'Haskell': 'hs', 'C': 'c'}
+file_types_dictionary = {'C++': 'cpp', 'Python': 'py', 'Haskell': 'hs', 'C': 'c', 'Java': 'java', 'C#': 'cs', 'JavaScript': 'js'}
 
 # Define the folders and their corresponding difficulties
 folders_difficulty = {
@@ -36,8 +36,8 @@ for line in lines:
     line = line.strip()
     folder = line.split("/")[1]  # Get the folder name
 
-    # Matches leetcode_123_question-title_(optional-info).py
-    m = re.search(r'\/.*leetcode_(\d+)_(.*?)_?(\(.*\))?\.py', line)
+    # Matches leetcode_123_question-title_(optional-info).(programming-language-file-type)
+    m = re.search(r'\/.*leetcode_(\d+)_(.*?)_?(\(.*\))?\.(cpp|py|hs|c|java|cs|js)', line)
 
     if m:
         q_number = m.group(1)  # Get the number from the file name
