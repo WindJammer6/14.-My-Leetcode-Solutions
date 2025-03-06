@@ -31,7 +31,7 @@ folders_difficulty = {
 stream = os.popen(
     'find . -type f '
     '-iname "leetcode_*.py" '
-    '-o -iname "leetcode_*.java"'
+    '-o -iname "leetcode_*.java" '
     '-o -iname "leetcode_*.cpp" '
     '-o -iname "leetcode_*.c" '
     '-o -iname "leetcode_*.hs" '
