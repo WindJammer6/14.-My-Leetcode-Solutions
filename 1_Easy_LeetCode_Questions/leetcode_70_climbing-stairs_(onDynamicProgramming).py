@@ -9,7 +9,7 @@
 #     4             4                     5                                     +2 
 #     5             5                     8                                     +3 
 #     6             6                    13                                     +5 
- 
+
 
 # The top-down dynamic programming (with memoization) code is partially taken from my school's 
 # lecture notes, but I identified the recurrence that relates the sub-problems, the sub-problems 
@@ -22,17 +22,17 @@
 #   function climbing_stairs(n): 
 # 	Require: 𝑛 is a positive integer 
 # 	1. if 𝑛 in 𝑚𝑒𝑚𝑜 then: 
-#   2. 	return 𝑚𝑒𝑚𝑜[𝑛] 
+#  2. 	return 𝑚𝑒𝑚𝑜[𝑛] 
 # 	3. if 𝑛 == 1 then: 
 # 	4. 	𝑚𝑒𝑚𝑜[𝑛] ← 1 
-#   5. 	return 1 
+#  5. 	return 1 
 # 	6. else if 𝑛 == 2 then: 
 # 	7. 	𝑚𝑒𝑚𝑜[𝑛] ← 2 
-#   8. 	return 2 
-#   9. else: 
-#  10. 	𝑚 ← climbing_stairs(n-1) + climbing_stairs(n-2) 
-#  11. 	𝑚𝑒𝑚𝑜[𝑛] ← 𝑚 
-#  12. 	return 𝑚 
+#  8. 	return 2 
+#  9. else: 
+# 10. 	𝑚 ← climbing_stairs(n-1) + climbing_stairs(n-2) 
+# 11. 	𝑚𝑒𝑚𝑜[𝑛] ← 𝑚 
+# 12. 	return 𝑚 
 
 
 class Solution:
