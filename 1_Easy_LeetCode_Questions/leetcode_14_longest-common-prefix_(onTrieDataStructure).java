@@ -43,7 +43,7 @@ class Solution {
 
 
 
-// Approach 2: Using Trie Data Structure, with reference to the approach explained by this Leetcode solution
+// Approach 2: Using Trie Data Structure, with reference to the approach explained by this Leetcode solution (works)
 // Source: https://leetcode.com/problems/longest-common-prefix/solutions/6614689/java-solution-using-trie/ (Leetcode)
 
 // Approach:
