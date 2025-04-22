@@ -34,8 +34,10 @@ class Solution {
     }
 
     // Approach:
-    // Do DFS on the binary tres, and get the array output that shows the traversal. If both output
-    // arrays are the same, they are the same tree.
+    // Do DFS on the binary tres, and get the array output that shows the traversal, using '#' which helps
+    // to maintain structural information of the binary tree in the array output. 
+    
+    // If both output arrays are the same, they are the same tree.
     public void postOrderTraversal(TreeNode treeNode, StringBuilder sb){
         if (treeNode == null){
             sb.append('#');         // represents null
