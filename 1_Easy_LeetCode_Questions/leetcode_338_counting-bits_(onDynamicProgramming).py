@@ -1,6 +1,6 @@
-# The bottom-up dynamic programming (with memoization) code is partially taken from my school's 
+# The bottom-up dynamic programming (with tabulation) code is partially taken from my school's 
 # lecture notes, but I identified the recurrence that relates the sub-problems, the sub-problems 
-# and base cases for this question and modified the top-down dynamic programming (with memoization) 
+# and base cases for this question and modified the top-down dynamic programming (with tabulation) 
 # code to this context to answer this question
 
 # Analyzing for potential patterns for the question with trial and error: 
