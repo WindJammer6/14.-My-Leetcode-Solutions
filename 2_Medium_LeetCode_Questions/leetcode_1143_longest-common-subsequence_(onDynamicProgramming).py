@@ -10,7 +10,7 @@
 # Let:
 # - i be the index position of the letter in text1
 # - j be the index position of the letter in text2
-# - Each cell contains the length of the lLngest Common Subsequence (LCS) between the first i chararcters 
+# - Each cell contains the length of the longest Common Subsequence (LCS) between the first i chararcters 
 #   of text1 and the first j characters of text2
 
 #             j →      0     1     2     3     4     5     
