@@ -37,6 +37,7 @@ stream = os.popen(
     '-o -iname "leetcode_*.hs" '
     '-o -iname "leetcode_*.cs" '
     '-o -iname "leetcode_*.js" '
+    '-o -iname "leetcode_*.sql" '
 )
 lines = stream.readlines()
 
@@ -46,7 +47,7 @@ for line in lines:
     folder = line.split("/")[1]  # Get the folder name
 
     # Matches leetcode_123_question-title_(optional-info).(programming-language-file-type)
-    m = re.search(r'\/.*leetcode_(\d+)_(.*?)_?(\(.*\))?\.(cpp|py|hs|c|java|cs|js)', line)
+    m = re.search(r'\/.*leetcode_(\d+)_(.*?)_?(\(.*\))?\.(cpp|py|hs|c|java|cs|js|sql)', line)
 
     if m:
         q_number = m.group(1)  # Get the number from the file name
