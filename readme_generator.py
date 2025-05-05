@@ -18,7 +18,7 @@ They do answer the Leetcode questions, but there are definitely better answer co
 
 print(start_of_readme)
 
-file_types_dictionary = {'C++': 'cpp', 'Python': 'py', 'Haskell': 'hs', 'C': 'c', 'Java': 'java', 'C#': 'cs', 'JavaScript': 'js'}
+file_types_dictionary = {'C++': 'cpp', 'Python': 'py', 'Haskell': 'hs', 'C': 'c', 'Java': 'java', 'C#': 'cs', 'JavaScript': 'js', 'SQL': 'sql'}
 
 # Define the folders and their corresponding difficulties
 folders_difficulty = {
