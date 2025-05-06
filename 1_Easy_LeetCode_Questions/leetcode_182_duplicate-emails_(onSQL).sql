@@ -9,7 +9,7 @@
 -- https://www.w3schools.com/mysql/mysql_groupby.asp (GeekforGeeks)
 -- https://www.w3schools.com/mysql/mysql_having.asp (GeekforGeeks)
 SELECT `email`
-AS Email
+AS 'Email'
 FROM Person
 GROUP BY `email`
 
