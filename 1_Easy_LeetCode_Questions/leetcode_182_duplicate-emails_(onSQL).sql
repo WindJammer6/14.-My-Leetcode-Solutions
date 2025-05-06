@@ -14,6 +14,7 @@ FROM Person
 GROUP BY `email`
 
 HAVING COUNT(`email`) > 1
+  -- If you use this line of code, the MySQL (SQL implementation) query will not work!
 -- WHERE COUNT(`email`) > 1
 
 ORDER BY `email`;
