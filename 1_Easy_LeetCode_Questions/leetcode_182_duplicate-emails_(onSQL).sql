@@ -6,15 +6,15 @@
 
 -- About MySQL 'GROUP BY' and 'HAVING' commands:
 -- Source(s):
--- https://www.w3schools.com/mysql/mysql_groupby.asp (GeekforGeeks)
--- https://www.w3schools.com/mysql/mysql_having.asp (GeekforGeeks)
+-- https://www.w3schools.com/mysql/mysql_groupby.asp (W3Schools)
+-- https://www.w3schools.com/mysql/mysql_having.asp (W3Schools)
 SELECT `email`
 AS 'Email'
 FROM Person
 GROUP BY `email`
 
 HAVING COUNT(`email`) > 1
-  -- If you use this line of code, the MySQL (SQL implementation) query will not work!
+-- If you use this line of code, the MySQL (SQL implementation) query will not work!
 -- WHERE COUNT(`email`) > 1
 
 ORDER BY `email`;
