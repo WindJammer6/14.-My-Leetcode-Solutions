@@ -1,4 +1,4 @@
-# Using top-down dynamic programming
+# Using top-down dynamic programming (memoization)
 
 # Base case(s):
 # (Note: 'output' is the number of ways to reach that particular cell)
@@ -53,4 +53,5 @@ class Solution:
 solution = Solution()
 print(solution.uniquePaths(3, 7))       # 28
 print(solution.uniquePaths(3, 2))       # 3
+
 print(solution.uniquePaths(23, 12))     # 193536720
