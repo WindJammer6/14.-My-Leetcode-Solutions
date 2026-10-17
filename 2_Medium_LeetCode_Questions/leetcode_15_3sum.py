@@ -1,3 +1,14 @@
+# Pesudocode:
+# 1. Iterate through the list. This is the iterating index.
+# 2. For the remaining part of the list (iterating index to end
+#    of the list, do the two pointers approach such that 
+#    "nums[first_pointer] + nums[second_pointer] + nums[iterating_index] == 0")
+# 3. To avoid picking duplicates triplets, you need to:
+#    - shift the iterating index to the next position whenever the current number 
+#       its at is the same as the previous number it was at 
+#    - shift the left or right index to the next position whenever the current number 
+#       its at is the same as the previous number it was at 
+
 class Solution:
     def threeSum(self, nums):
         
