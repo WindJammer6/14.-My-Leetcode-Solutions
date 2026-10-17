@@ -21,12 +21,16 @@ class Solution:
             firstpointer = i + 1
             secondpointer = len(nums) - 1 
 
+            # Checking if current number at iterating index is same as the previous number iterating index 
+            # to avoid picking duplicate triplets
             if i > 0 and nums[i] == nums[i - 1]:
                 continue
             
             while firstpointer < secondpointer:
                 if nums[firstelement] + nums[firstpointer] + nums[secondpointer] < 0:
                     firstpointer += 1
+                    # Checking if current number at left pointer is same as the previous number 
+                    # left pointer to avoid picking duplicate triplets
                     while (firstpointer < secondpointer) and (nums[firstpointer] == nums[firstpointer - 1]):
                         firstpointer += 1
                     # print(firstpointer)
