@@ -1,3 +1,13 @@
+# Pseudocode:
+# 1. Set top, bottom, left and right boundaries
+# 2. Starting from top left position, move right. 
+# 3. When reached the right boundary, shrink the top boundary by 1, then move down. 
+# 4. When reached the bottom boundary, shrink the right boundary by 1, then move left.
+# 5. When reached the left boundary, shrink the bottom boundary by 1, then move up.
+# 6. When reached the top boundary, shrink the left boundary by 1, then move right.
+# 7. Repeat steps 3 to 6 until either the left boundary = right boundary or top boundary = bottom boundary
+
+
 class Solution:
     def spiralOrder(self, matrix):
         n = len(matrix)
