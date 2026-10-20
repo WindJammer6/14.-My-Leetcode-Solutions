@@ -1,3 +1,4 @@
+# Approach 1: Using Union Find Algorithm (works)
 # Using Union Find Algorithm,
 # Sources: 
 # - https://www.youtube.com/watch?v=ayW5B2W9hfo (Potato Coders) (Youtube video by Potato Coders
@@ -104,7 +105,52 @@ class Solution:
         # Return the size of the largest group
         return max(group_sizes.values())
 
+
+# //////////////////////////////////////////////////////////////////////////////
+
+
+# Approach 2: Using Hash Set (Neetcode's approach)
+# With HEAVY reference to this solution: https://www.youtube.com/watch?v=P6RZZMu_maU (Neetcode) (YouTube 
+# video by Neetcode titled, 'Leetcode 128 - LONGEST CONSECUTIVE SEQUENCE')
+    
+# This approach is leveraging on the crucial idea that lookups in a (hash) set is a O(1) operation
+
+# Pseudocode:
+# 1. Translate nums into a (hash) set, and store a hash table of the lengths of all disjointed sequences
+# 2. For each value, check if that value could potentially be start of a sequence by checking if
+#    value-1 exists i.e. if it has a left neighbour
+#    2a. If it does, that means it is not the start of a sequence
+#    2b. If it does not, then it is the start of a sequence, and we check whether if value+1 exists 
+#        i.e. if it has a right neighbour. 
+#        2bi. If it does, increment the length of this sequence by 1 (with this value being the start of 
+#             the sequence). Keep checking for right neighbours and incrementing the length until there 
+#             are no more right neighbours.
+# 3. Return the largest value in the hash table
+
+class Solution:
+    def longestConsecutive(self, nums: list[int]) -> int:
+        nums = set(nums)
+        length_of_disjointed_sequences = {}
         
+        for i in nums:
+            if i-1 in nums:
+                pass
+            else:
+                length_of_disjointed_sequences[i] = 1
+                iterator = i
+                while iterator+1 in nums:
+                    # print(length_of_disjointed_sequences)
+                    length_of_disjointed_sequences[i] += 1
+                    iterator += 1
+
+        output = 0
+        for key, value in length_of_disjointed_sequences.items():
+            if value > output:
+                output = value
+
+        return output
+
+
 
 solution = Solution()
 nums1 = [100,4,200,1,3,2]
