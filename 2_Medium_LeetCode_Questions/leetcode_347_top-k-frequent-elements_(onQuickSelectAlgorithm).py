@@ -226,6 +226,37 @@ class Solution2:
         return k_most_frequent_elements
 
 
+# ////////////////////////////////////////////////////////////////
+
+
+# Approach 3: Hash Table and Max-Heap (works, in O(nlogn) time complexity)
+import heapq
+
+class Solution3:
+    def topKFrequent(self, nums: list[int], k: int) -> list[int]:
+        dictionary = {}
+
+        for i in nums:
+            if i not in dictionary:
+                dictionary.update({i : 1})
+            else:
+                dictionary[i] += 1
+
+        # Use a min-heap to find the top k most frequent elements
+        # Since the heapq Python library does not support max-heap (only min-heap), we use 
+        # negative values to reverse the priority to make it behave like a max-heap
+        heap = []
+        for key, value in dictionary.items():
+            heapq.heappush(heap, (-value, key))
+
+        output = []
+        for i in range(k):
+            popped = heapq.heappop(heap)
+            output.append(popped[1])
+
+        return output
+        
+
 
 solution = Solution()
 print(solution.topKFrequent([1,1,1,2,2,3], 2))      # [1,2]
@@ -234,6 +265,12 @@ print(solution.topKFrequent([3,0,1,0], 1))          # [0]
 print(solution.topKFrequent([1,2], 2))              # [1,2]
 
 solution2 = Solution2()
+print(solution2.topKFrequent([1,1,1,2,2,3], 2))      # [1,2]
+print(solution2.topKFrequent([1], 1))                # [1]
+print(solution2.topKFrequent([3,0,1,0], 1))          # [0]
+print(solution2.topKFrequent([1,2], 2))              # [1,2]
+
+solution2 = Solution3()
 print(solution2.topKFrequent([1,1,1,2,2,3], 2))      # [1,2]
 print(solution2.topKFrequent([1], 1))                # [1]
 print(solution2.topKFrequent([3,0,1,0], 1))          # [0]
