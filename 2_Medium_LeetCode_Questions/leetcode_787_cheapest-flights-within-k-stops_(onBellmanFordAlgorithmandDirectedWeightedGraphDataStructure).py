@@ -10,7 +10,12 @@
 
 # What is the Bellman Ford algorithm?
 # Similar to the Dijkstra's algorithm, the Bellman Ford algorithm also aims to find the shortest path 
-# from one node to all other vertices. It first calculates the shortest distances which have at-most one edge in the path. Then, it calculates the shortest paths with at-most 2 edges, and so on. After the i-th iteration of outer loop, the shortest paths with at most i edges are calculated. There can be maximum |V| – 1 edge in any simple path, that is why the outer loop runs |v| – 1 time. The idea is, assuming that there is no negative weight cycle if we have calculated shortest paths with at most i edges, then an iteration over all edges guarantees to give the shortest path with at-most (i+1) edges.
+# from one node to all other vertices. It first calculates the shortest distances which have at-most one edge in the 
+# path. Then, it calculates the shortest paths with at-most 2 edges, and so on. After the i-th iteration of outer 
+# loop, the shortest paths with at most i edges are calculated. There can be maximum |V| – 1 edge in any simple path, 
+# that is why the outer loop runs |v| – 1 time. The idea is, assuming that there is no negative weight cycle if we 
+# have calculated shortest paths with at most i edges, then an iteration over all edges guarantees to give the 
+# shortest path with at-most (i+1) edges.
 
 # It can handle edges with negative weights, unlike Dijkstra's algorithm.
 
